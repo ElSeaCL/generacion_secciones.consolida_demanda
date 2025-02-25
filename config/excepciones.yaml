@@ -1,0 +1,22 @@
+# Configuración general
+app_name: "Mi Aplicación"
+version: "1.0.0"
+
+# Configuración de la base de datos
+database:
+  host: "localhost"
+  port: 5432
+  user: "admin"
+  password: "secreto"
+  name: "mi_base_de_datos"
+
+# Configuración del servidor
+server:
+  host: "0.0.0.0"
+  port: 8000
+  debug: true
+
+# Otras configuraciones
+logging:
+  level: "INFO"
+  file: "app.log"
