@@ -9,7 +9,7 @@ from dataclasses import dataclass
 @dataclass(frozen=True)
 class Sala:
     """
-    Data class de sala
+    Data class de sala.
     """
     id: int
     nombre: str

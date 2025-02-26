@@ -20,3 +20,16 @@ class Asignatura:
 
     def __eq__(self, asignatura: 'Asignatura'):
         return asignatura.nombre in self._asignaturas_equivalentes
+
+@dataclass(frozen=True)
+class InstanciaAsignatura:
+    """
+    Asignatura vista a nivel de periodo, sede, institución, jornada y 
+    modalidad
+    """
+    asignatura: Asignatura
+    periodo: int
+    sede: int
+    institucion: int
+    jornada: int
+    modalidad: int
