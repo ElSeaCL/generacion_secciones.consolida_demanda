@@ -13,6 +13,7 @@ class Asignatura:
     Data class de asignatura
     """
     nombre: str
+    tipo: int
     horas_semanales: int
     horas_virtuales: int
 

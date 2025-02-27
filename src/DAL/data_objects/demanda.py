@@ -3,7 +3,7 @@ demanda.py
 
 Contiene el data base object que permite recuperar datos de demanda
 """
-from .base import Base, Column, String, Date, Integer
+from .base import Base, Column, String, Integer
 
 class Demanda(Base):
     """
@@ -11,14 +11,14 @@ class Demanda(Base):
     """
     __tablename__ = "opt_demanda_sede"
 
-    peri_ccod = Column(Integer())
-    sede_ccod = Column(Integer())
-    inst_ccod = Column(Integer())
-    jorn_ccod = Column(Integer())
-    plan_ccod = Column(Integer())
-    nive_ccod = Column(Integer())
-    moda_ccod = Column(Integer())
+    peri_ccod = Column(Integer(), primary_key=True)
+    sede_ccod = Column(Integer(), primary_key=True)
+    inst_ccod = Column(Integer(), primary_key=True)
+    jorn_ccod = Column(Integer(), primary_key=True)
+    plan_ccod = Column(Integer(), primary_key=True)
+    nive_ccod = Column(Integer(), primary_key=True)
+    moda_ccod = Column(Integer(), primary_key=True)
     espe_ccod = Column(String(255))
-    asig_ccod = Column(String(254))
+    asig_ccod = Column(String(254), primary_key=True)
     area_ccod = Column(Integer())
     demanda  = Column(Integer())

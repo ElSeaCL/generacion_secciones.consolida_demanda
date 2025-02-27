@@ -1,3 +1,5 @@
 .venv
 src/__pycache__
 src/DAL/data_objects/__pycache__
+src/DAL/__pycache__
+src/data_objects/__pycache__
