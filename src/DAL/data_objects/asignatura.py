@@ -40,3 +40,4 @@ class AsignaturaEquivalente(Base):
 
     asig_ccod = Column(String(6), primary_key=True)
     asig_ccod_equiv = Column(String(6), primary_key=True)
+    easieq_ccod = Column(Integer())

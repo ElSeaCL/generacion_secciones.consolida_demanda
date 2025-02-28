@@ -73,6 +73,11 @@ def obtiene_demandas(peri_ccod: int, sede_ccod: int, sesion: Session) -> List[do
 
         coleccion_demandas.append(
             do.Demanda(
+                periodo=peri_ccod,
+                sede=sede_ccod,
+                institucion=demanda.inst_ccod,
+                jornada=demanda.jorn_ccod,
+                modalidad=demanda.moda_ccod,
                 asignatura_original=asignatura,
                 asignatura=asignatura,
                 plan=plan,
@@ -108,6 +113,7 @@ def obtiene_asignatura(
 
     resultado_equivalencias = sesion.query(
         dbo.AsignaturaEquivalente.asig_ccod_equiv).filter(
+            dbo.AsignaturaEquivalente.easieq_ccod == 1,
             dbo.AsignaturaEquivalente.asig_ccod == asig_ccod,
             dbo.AsignaturaEquivalente.asig_ccod_equiv.in_(asignaturas)
             ).all()

@@ -17,9 +17,11 @@ class Asignatura:
     horas_semanales: int
     horas_virtuales: int
 
-    _asignaturas_equivalentes: List['Asignatura']
+    _asignaturas_equivalentes: List[str]
 
     def __eq__(self, asignatura: 'Asignatura'):
+        if asignatura.nombre == self.nombre:
+            return True
         return asignatura.nombre in self._asignaturas_equivalentes
 
 @dataclass(frozen=True)
