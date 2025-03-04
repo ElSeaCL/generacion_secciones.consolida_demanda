@@ -41,3 +41,18 @@ class AsignaturaEquivalente(Base):
     asig_ccod = Column(String(6), primary_key=True)
     asig_ccod_equiv = Column(String(6), primary_key=True)
     easieq_ccod = Column(Integer())
+
+class AsignaturaExcepcion(Base):
+    """
+    Mapeo a la tabla opt_asignaturas_excepcion
+    """
+    __tablename__ = "opt_asignaturas_excepcion"
+
+    peri_ccod = Column(Integer(), primary_key=True)
+    asig_ccod = Column(Integer(), primary_key=True)
+    oaon_tipo = Column(Integer(), primary_key=True)
+    oaon_minimo = Column(Integer())
+    oaon_maximo = Column(Integer())
+    asig_ccod_equiv = Column(String(6))
+    oaon_habilitado = Column(Integer())
+    

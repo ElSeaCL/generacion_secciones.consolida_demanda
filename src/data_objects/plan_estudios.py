@@ -15,4 +15,5 @@ class PlanEstudios:
     nombre: str
     correlativo: int
     especialidad: str
+    vigente: int
     

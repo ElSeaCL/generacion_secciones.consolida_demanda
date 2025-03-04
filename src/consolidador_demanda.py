@@ -24,8 +24,13 @@ class ConsolidadorDemanda:
         Inicia el proceso de generación de los grupos compactables
         de demanda.
         """
+
+
         # Itera por sede
         for sede_ccod, demandas in self._demandas_sede.items():
+
+            ajustador_demanda_virtual(demanda)
+
             for demanda in demandas:
                 pass
             

@@ -36,3 +36,12 @@ class InstanciaAsignatura:
     institucion: int
     jornada: int
     modalidad: int
+
+@dataclass(frozen=True)
+class AsignaturaExcepcion:
+    """
+    Excepciones por asignatura
+    """
+    tipo: int
+    demanda_minima: int
+    demanda_maxima: int

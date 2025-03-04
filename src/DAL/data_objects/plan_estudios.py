@@ -16,3 +16,4 @@ class PlanEstudios(Base):
     espe_ccod = Column(String(4))
     plan_tdesc = Column(String(80))
     plan_ncorrelativo = Column(Integer())
+    epes_ccod = Column(Integer())

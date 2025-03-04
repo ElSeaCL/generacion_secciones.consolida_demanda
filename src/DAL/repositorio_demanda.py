@@ -139,7 +139,8 @@ def obtiene_planes(plan_ccod: int, sesion: Session) -> do.PlanEstudios:
         resultado.plan_ccod,
         resultado.plan_tdesc,
         resultado.plan_ncorrelativo,
-        resultado.espe_ccod
+        resultado.espe_ccod,
+        resultado.epes_ccod
     )
 
     return plan
