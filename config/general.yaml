@@ -1,0 +1,55 @@
+# Configuración general
+app_name: "Mi Aplicación"
+version: "1.0.0"
+periodo: 240
+
+# Configuración de la base de datos
+database:
+  esquema: "DSTG"
+  usuario: "sgonzalezg[OPTIMIZADOR]"
+  password: "Manhattan_1301"
+
+# Configuración del servidor
+server:
+  host: "0.0.0.0"
+  port: 8000
+  debug: true
+
+# Otras configuraciones
+logging:
+  level: "INFO"
+  file: "app.log"
+
+ajustes:
+  virtual:
+    atributo: "sede"
+    casos:
+      plan_descontinuado:
+        habilitado: 1
+        evaluador:
+          tipo: "agrupado"
+          filtro: "planes descontinuados"
+          evaluador: "incumple demanda minima"
+        obtenedor:
+          tipo: "fijo"
+          valor: 33
+
+      empleabilidad:
+        habilitado: 1
+        evaluador:
+          tipo: "individual"
+          filtro: "asignatura empleabilidad"
+          evaluador: "default"
+        obtenedor:
+          tipo: "fijo"
+          valor: 33
+
+      horas_virtuales:
+        habilitado: 1
+        evaluador:
+          tipo: "individual"
+          filtro: "horas totales virtuales"
+          evaluador: "default"
+        obtenedor:
+          tipo: "fijo"
+          valor: 33   

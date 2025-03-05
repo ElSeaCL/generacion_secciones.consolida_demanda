@@ -3,4 +3,9 @@ src/__pycache__
 src/DAL/data_objects/__pycache__
 src/DAL/__pycache__
 src/data_objects/__pycache__
-src/funciones_excepcion/__pycache__
+src/ajuste_demanda/__pycache__
+src/ajuste_demanda/interfaces/__pycache__
+src/ajuste_demanda/funciones_valores/__pycache__
+src/ajuste_demanda/funciones_filtro/__pycache__
+src/ajuste_demanda/funciones_evalua/__pycache__
+src/ajuste_demanda/funciones_filtro/utils/__pycache__

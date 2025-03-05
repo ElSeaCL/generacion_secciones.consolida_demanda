@@ -14,5 +14,7 @@ class Sala:
     id: int
     nombre: str
     tipo_sala: int
+    estado: int
     sede: int
+    cupo: int
     

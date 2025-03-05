@@ -6,7 +6,7 @@ Contiene funciones para manejar excepciones respecto a cambios de modalidad
 from sqlalchemy import text
 from sqlalchemy.orm import Session
 
-from src.funciones_excepcion.parseador_demanda import obtiene_parametro_consulta
+from src.ajuste_demanda.funciones_filtro.utils.parseador_demanda import obtiene_parametro_consulta
 from src.data_objects.demanda import Demanda
 
 
