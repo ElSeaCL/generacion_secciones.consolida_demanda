@@ -4,7 +4,7 @@ de un ajuste de su estado.
 """
 
 from typing import Callable, List
-from src.ajuste_demanda.interfaces.abs_evaluador import AbsEvaluadorDemanda
+from src.ajuste_demanda.evaluador_demanda.interfaces.abs_evaluador import AbsEvaluadorDemanda
 from src.data_objects.demanda import Demanda
 
 

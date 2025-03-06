@@ -1,0 +1,7 @@
+from .fn_asignatura_descriptor_virtual import fn_asignatura_virtual
+#from .fn_asignatura_empleabilidad import 
+#from .fn_cupo_sala import 
+#from .fn_empleabilidad import fn_planes_descontinuados
+from .fn_asignatura_descriptor_virtual import fn_asignatura_virtual
+from .fn_modalidad import correccion_asignaturas_online
+from .fn_planes_descontinuados import fn_planes_descontinuados

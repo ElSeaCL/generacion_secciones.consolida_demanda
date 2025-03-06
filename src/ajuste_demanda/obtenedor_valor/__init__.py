@@ -1,0 +1,3 @@
+from .obtenedor_valor import ObtenedorValorFijo
+from .obtenedor_valor import ObtenedorValorExcepcionAsignatura
+from .interfaces.abs_obtenedor_valor import AbsObtenedorValor

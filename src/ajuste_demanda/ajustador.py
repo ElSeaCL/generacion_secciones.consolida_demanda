@@ -6,8 +6,8 @@ Encargado de realizar el ajuste en los valores de demanda según lo definido.
 
 from typing import Union
 
-from src.ajuste_demanda.interfaces.abs_evaluador import AbsEvaluadorDemanda
-from src.ajuste_demanda.interfaces.abs_obtenedor_valor import AbsObtenedorValor
+from src.ajuste_demanda.evaluador_demanda.interfaces.abs_evaluador import AbsEvaluadorDemanda
+from src.ajuste_demanda.obtenedor_valor.interfaces.abs_obtenedor_valor import AbsObtenedorValor
 from src.data_objects.demanda import Demanda
 
 

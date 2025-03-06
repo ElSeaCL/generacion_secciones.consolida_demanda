@@ -7,6 +7,8 @@ import timeit
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
+from src.ajuste_demanda import EvaluadorFactory
+from src.ajuste_demanda import ObtenedorFactory
 from src.ajuste_demanda.evaluador_demanda import EvaluadorDemandaAgrupada, EvaluadorDemandaIndividual
 from src.ajuste_demanda.funciones_evalua.fn_cumple_demanda_minima import fn_incumple_demanda_minima
 from src.ajuste_demanda.funciones_filtro.fn_planes_descontinuados import fn_planes_descontinuados
@@ -41,6 +43,12 @@ demanda_total = sum(
     ) 
          for sede in demanda_sede.keys()]
 )
+
+
+evaluador_factory = EvaluadorFactory()
+obtenedor_factory = ObtenedorFactory()
+print('')
+
 
 def fn_asignaturas_online(demandas):
     fn_filtra_algo = lambda x: correccion_asignaturas_online(demanda=x, sesion=sesion)

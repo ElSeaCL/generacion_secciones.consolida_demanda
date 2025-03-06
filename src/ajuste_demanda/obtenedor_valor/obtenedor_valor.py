@@ -6,7 +6,7 @@ Clases utilizadas para obtener los valores a modificar.
 
 from typing import Callable
 
-from src.ajuste_demanda.interfaces.abs_obtenedor_valor import AbsObtenedorValor
+from src.ajuste_demanda.obtenedor_valor.interfaces.abs_obtenedor_valor import AbsObtenedorValor
 
 
 class ObtenedorValorFijo(AbsObtenedorValor):
