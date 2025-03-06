@@ -13,6 +13,14 @@ class AbsEvaluadorDemanda(abc.ABC):
     """Evalua la demanda y determina si cumple con la excepción"""
 
     _funcion_filtro: Callable = None
+    _registro = {}
+
+    @classmethod
+    def registrar(cls, nombre):
+        def decorator(subclass):
+            cls._registro[nombre] = subclass
+            return subclass
+        return decorator
 
     @abc.abstractmethod
     def filtra(self, demandas: List[Demanda]) -> List[Demanda]:

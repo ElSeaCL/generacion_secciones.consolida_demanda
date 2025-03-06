@@ -27,9 +27,9 @@ ajustes:
       plan_descontinuado:
         habilitado: 1
         evaluador:
-          tipo: "agrupado"
-          filtro: "planes descontinuados"
-          evaluador: "incumple demanda minima"
+          tipo: "grupal"
+          funcion_filtro: "planes descontinuados"
+          funcion_evalua: "incumple demanda mínima"
         obtenedor:
           tipo: "fijo"
           valor: 33
@@ -38,8 +38,7 @@ ajustes:
         habilitado: 1
         evaluador:
           tipo: "individual"
-          filtro: "asignatura empleabilidad"
-          evaluador: "default"
+          funcion_filtro: "asignatura empleabilidad"
         obtenedor:
           tipo: "fijo"
           valor: 33
@@ -48,8 +47,7 @@ ajustes:
         habilitado: 1
         evaluador:
           tipo: "individual"
-          filtro: "horas totales virtuales"
-          evaluador: "default"
+          funcion_filtro: "horas totales virtuales"
         obtenedor:
           tipo: "fijo"
           valor: 33   

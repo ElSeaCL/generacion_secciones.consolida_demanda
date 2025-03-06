@@ -10,17 +10,23 @@ from sqlalchemy.orm import sessionmaker
 from src.ajuste_demanda import EvaluadorFactory
 from src.ajuste_demanda import ObtenedorFactory
 from src.ajuste_demanda.evaluador_demanda import EvaluadorDemandaAgrupada, EvaluadorDemandaIndividual
-from src.ajuste_demanda.funciones_evalua.fn_cumple_demanda_minima import fn_incumple_demanda_minima
-from src.ajuste_demanda.funciones_filtro.fn_planes_descontinuados import fn_planes_descontinuados
-from src.ajuste_demanda.funciones_valores.fn_valor_cupo import fn_valor_fijo_cupo
+from src.ajuste_demanda.funciones import fn_incumple_demanda_minima
+from src.ajuste_demanda.funciones import fn_planes_descontinuados
+from src.ajuste_demanda.funciones import fn_valor_fijo_cupo
 from src.ajuste_demanda.obtenedor_valor import ObtenedorValorFijo
 from src.consolidador_demanda import ConsolidadorDemanda
 from src.DAL.repositorio_demanda import obtiene_demandas, obtiene_sedes
-from src.ajuste_demanda.funciones_filtro.fn_modalidad import correccion_asignaturas_online
+from src.ajuste_demanda.funciones import correccion_asignaturas_online
 from src import configuration
+
+# pylint: disable=no-member
 
 # Parametros
 peri_ccod = 240
+
+evaluador_factory = EvaluadorFactory()
+evaluador_factory.crea_instancia(configuration.ajustes['virtual']['casos']['plan_descontinuado']['evaluador'])
+obtenedor_factory = ObtenedorFactory()
 
 # base de datos
 path = f"oracle+cx_oracle://{configuration.database['usuario']}:{configuration.database['password']}@{configuration.database['esquema']}" # pylint:disable=E1101
@@ -44,9 +50,6 @@ demanda_total = sum(
          for sede in demanda_sede.keys()]
 )
 
-
-evaluador_factory = EvaluadorFactory()
-obtenedor_factory = ObtenedorFactory()
 print('')
 
 

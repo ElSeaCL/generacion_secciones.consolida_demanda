@@ -6,9 +6,9 @@ Contiene funciones para manejar excepciones respecto a cambios de modalidad
 from sqlalchemy import text
 from sqlalchemy.orm import Session
 
-from src.ajuste_demanda.funciones_filtro.utils.parseador_demanda import obtiene_parametro_consulta
+from src.ajuste_demanda.funciones.utils import obtiene_parametro_consulta
 from src.data_objects.demanda import Demanda
-
+from src.ajuste_demanda.funciones.utils import registro
 
 def correccion_asignaturas_online(demanda: Demanda, sesion: Session) -> bool:
     """

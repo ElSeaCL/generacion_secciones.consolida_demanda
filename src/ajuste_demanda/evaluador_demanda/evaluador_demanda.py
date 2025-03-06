@@ -8,6 +8,7 @@ from src.ajuste_demanda.evaluador_demanda.interfaces.abs_evaluador import AbsEva
 from src.data_objects.demanda import Demanda
 
 
+@AbsEvaluadorDemanda.registrar("individual")
 class EvaluadorDemandaIndividual(AbsEvaluadorDemanda):
     """
     Realiza una evaluación considerando cada demanda como una valor individual"""
@@ -21,6 +22,7 @@ class EvaluadorDemandaIndividual(AbsEvaluadorDemanda):
     def evalua(self, demandas):
         return True
 
+@AbsEvaluadorDemanda.registrar('grupal')
 class EvaluadorDemandaAgrupada(AbsEvaluadorDemanda):
     """
     Realiza una evaluación considerando cada demanda como una valor individual"""
